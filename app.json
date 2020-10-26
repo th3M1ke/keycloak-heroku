@@ -9,7 +9,7 @@
         "heroku"
     ],
     "stack": "container",
-    "repository": "https://github.com/mieckert/keycloak-heroku",
+    "repository": "https://github.com/seniordevonly/keycloak-heroku",
     "logo": "https://www.keycloak.org/resources/images/keycloak_logo_480x108.png",
     "success_url": "/",
     "env": {
@@ -24,12 +24,16 @@
         "PROXY_ADDRESS_FORWARDING": {
             "description": "Set to true since we will be running behind Heroku's load balancers",
             "value": "true"
+        },
+        "KEYCLOAK_IMPORT": {
+            "description": "The path to the realm.json",
+            "value": "change_me"
         }
     },
     "formation": {
         "web": {
             "quantity": 1,
-            "size": "Performance-M"
+            "size": "standard-2x"
         }
     },
     "addons": [
