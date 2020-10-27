@@ -9,3 +9,9 @@ due to Java's memory hunger) with a free Postgres database attached.
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+
+        "KEYCLOAK_IMPORT": {
+            "description": "The path to realm.json to be imported on startup",
+            "value": "/tmp/jobclub_realm.json",
+            "required": false
+        }

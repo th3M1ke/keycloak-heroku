@@ -24,11 +24,6 @@
         "PROXY_ADDRESS_FORWARDING": {
             "description": "Set to true since we will be running behind Heroku's load balancers",
             "value": "true"
-        },
-        "KEYCLOAK_IMPORT": {
-            "description": "The path to realm.json to be imported on startup",
-            "value": "/tmp/jobclub_realm.json",
-            "required": false
         }
     },
     "formation": {
