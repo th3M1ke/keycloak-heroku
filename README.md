@@ -22,9 +22,18 @@ The Docker file copies the theme from `themes/jobclub` to `/opt/jboss/keycloak/t
     
     COPY themes/jobclub /opt/jboss/keycloak/themes/jobclub
 
+#### Deployments
 It also copies the rabbitmq integration as a jar to Wildfly's deployment folder
 
     COPY deployments/keycloak-to-rabbit-1.0.jar /opt/jboss/keycloak/standalone/deployments/
+
+    $ docker cp deployments/keycloak-to-rabbit-1.1.jar jobclub-cloud_keycloak_1:/opt/jboss/keycloak/standalone/deployments/
+    $ docker rm -rf jobclub-cloud_keycloak_1:/opt/jboss/keycloak/standalone/deployments/keycloak-to-rabbit-1.1.jar.deployed
+    $ docker rm -rf jobclub-cloud_keycloak_1:/opt/jboss/keycloak/standalone/deployments/keycloak-to-rabbit-1.1.jar
+
+Enable logging in Keycloak UI by adding keycloak-to-rabbitmq
+    
+    Manage > Events > Config > Events Config > Event Listeners
 
 The source code is here: [keycloak-event-listener-rabbitmq](https://github.com/seniordevonly/keycloak-event-listener-rabbitmq)
 
