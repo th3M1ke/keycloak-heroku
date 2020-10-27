@@ -27,7 +27,8 @@
         },
         "KEYCLOAK_IMPORT": {
             "description": "The path to realm.json to be imported on startup",
-            "value": "/tmp/jobclub_realm.json"
+            "value": "/tmp/jobclub_realm.json",
+            "required": false
         }
     },
     "formation": {
