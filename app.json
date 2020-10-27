@@ -24,6 +24,10 @@
         "PROXY_ADDRESS_FORWARDING": {
             "description": "Set to true since we will be running behind Heroku's load balancers",
             "value": "true"
+        },
+        "KC_GO_BACK_APP_URL": {
+            "description": "Set the URL of the cancel link on the login screen",
+            "value": "true"
         }
     },
     "formation": {

@@ -67,7 +67,7 @@
                 <span>${msg("noAccount")} <a tabindex="6" href="${url.registrationUrl}">${msg("doRegister")}</a></span>
             </div>
             <div id="kc-registration">
-                <span><a tabindex="6" href="http://localhost:4200">${msg("goBackToApp")}</a></span>
+                <span><a tabindex="6" href="${properties.jcGoBackToAppUrl}">${msg("goBackToApp")}</a></span>
             </div>
         </#if>
     </#if>

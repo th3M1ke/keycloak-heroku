@@ -1,7 +1,7 @@
 # Deploy Keycloak to Heroku
 
 This repository deploys the [Keycloak](https://www.keycloak.org) Identity and Access Manangement Solution 
-to Heroku.  It is based of Keycloak's official docker image with some slight modifications to use the
+to Heroku.  It is based of Keycloak's official [docker image](https://hub.docker.com/r/jboss/keycloak/) with some slight modifications to use the
 Heroku variable for `PORT` and `DATABASE_URL` properly.
 
 The deployment will be made with a single Standard-2X dyno (it won't run very well in smaller dynos
