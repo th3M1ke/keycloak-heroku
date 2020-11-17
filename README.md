@@ -41,7 +41,7 @@ The source code is here: [keycloak-event-listener-rabbitmq](https://github.com/s
 Build Docker image:
     
     $ cd <project home>
-    $ docker build -t keycloak/seniordev .
+    $ docker build -t keycloak/intellitech .
     
 Run Docker image with themes mounted locally in this project: 
 
