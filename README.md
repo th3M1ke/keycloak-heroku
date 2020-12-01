@@ -61,8 +61,10 @@ Run Docker image with themes mounted locally in this project:
 
 Check the mounting of disk works correctly
 
-    $ docker exec -it keycloak_sd_container bash
-    $ cd /opt/jboss/keycloak/themes/jobclub
+    $ docker ps
+    take the container id
+    $ docker exec -it <container id> bash
+    $ cd /opt/jboss/keycloak/themes/wtc
     
 Publish [image](https://linuxconfig.org/how-to-customize-docker-images-with-dockerfiles)
 
