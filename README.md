@@ -66,6 +66,37 @@ Check the mounting of disk works correctly
     $ docker exec -it <container id> bash
     $ cd /opt/jboss/keycloak/themes/wtc
     
+    
+    docker exec -it <container id> cp
+    docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
+    docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PAT
+    
+    docker cp deployments/keycloak-to-rabbit-1.2.jar 615d51ae075d:/opt/jboss/keycloak/standalone/deployments
+    
+    docker cp 35e2729ded6e:/opt/jboss/keycloak/standalone/configuration/standalone.xml .
+    docker cp ./standalone.xml 35e2729ded6e:/opt/jboss/keycloak/standalone/configuration/standalone.xml
+
+    docker exec -u root -it  45aee5282128 sh
+    
+    docker exec -u root -it  <container_id> sh
+    microdnf install yum
+    yum install vim
+    vim /opt/jboss/keycloak/standalone/configuration/standalone.xml
+
+## Logs
+Documentation [here](https://docs.docker.com/engine/reference/commandline/logs/)
+
+    $ docker logs [OPTIONS] CONTAINER
+    $ docker logs --follow
+    $ docker logs 45aee5282128 --follow
+
+To investigate the structure of user profile JSON data provided by social providers you can enable the 
+
+    $ /opt/jboss/keycloak/standalone/configuration/standalone.xml
+    DEBUG level logger org.keycloak.social.user_profile_dump. 
+
+This is done in the server’s app-server configuration file (domain.xml or standalone.xml).
+    
 Publish [image](https://linuxconfig.org/how-to-customize-docker-images-with-dockerfiles)
 
     $ docker login
@@ -108,3 +139,10 @@ Publish [image](https://linuxconfig.org/how-to-customize-docker-images-with-dock
         "value": "/tmp/jobclub_realm.json",
         "required": false
     }
+    
+## Resource
+- [identity_broker](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker)
+- [identity_broker_first_login](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker_first_login)
+- [authentication/#guides](https://beta.developer.signicat.com/docs/authentication/#guides)
+- [openid-connect/endpoints](https://developer.signicat.com/documentation/authentication/protocols/openid-connect/endpoints/)
+- [identity-broker/mappers.html](https://wjw465150.gitbooks.io/keycloak-documentation/content/server_admin/topics/identity-broker/mappers.html)
