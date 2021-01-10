@@ -37,6 +37,13 @@ Enable logging in Keycloak UI by adding keycloak-to-rabbitmq
 
 The source code is here: [keycloak-event-listener-rabbitmq](https://github.com/seniordevonly/keycloak-event-listener-rabbitmq)
 
+#### Signicat identity provide
+Check out repo [keycloak-signicat](https://github.com/tribe-venneforsikring/keycloak-signicat)
+
+Output is 
+    
+    keycloak-signicat-<version>.jar
+
 ### Docker 
 Build Docker image:
     
