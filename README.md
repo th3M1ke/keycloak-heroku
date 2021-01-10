@@ -146,3 +146,4 @@ Publish [image](https://linuxconfig.org/how-to-customize-docker-images-with-dock
 - [authentication/#guides](https://beta.developer.signicat.com/docs/authentication/#guides)
 - [openid-connect/endpoints](https://developer.signicat.com/documentation/authentication/protocols/openid-connect/endpoints/)
 - [identity-broker/mappers.html](https://wjw465150.gitbooks.io/keycloak-documentation/content/server_admin/topics/identity-broker/mappers.html)
+- [keycloak-user/2018-December/016769.html](https://lists.jboss.org/pipermail/keycloak-user/2018-December/016769.html)
