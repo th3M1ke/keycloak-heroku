@@ -147,6 +147,11 @@ Publish [image](https://linuxconfig.org/how-to-customize-docker-images-with-dock
         "required": false
     }
     
+
+## SMTP Keycloak <> Sendgrid
+
+SendGrid [SMTP](https://sendgrid.com/docs/for-developers/sending-email/integrating-with-the-smtp-api/)
+
 ## Resource
 - [identity_broker](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker)
 - [identity_broker_first_login](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker_first_login)
