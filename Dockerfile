@@ -1,4 +1,4 @@
-FROM quay.io/keycloak/keycloak:12.0.1
+FROM quay.io/keycloak/keycloak:13.0.1
 
 COPY docker-entrypoint.sh /opt/jboss/tools
 COPY themes/wtc /opt/jboss/keycloak/themes/wtc
