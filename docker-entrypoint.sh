@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Set database config from Heroku DATABASE_URL
-if [ "$DATABASE_URL" != "" ]; then
-    echo "Found database configuration in DATABASE_URL=$DATABASE_URL"
+# Set database config from Heroku OLD_RECOVERY_URL
+if [ "$OLD_RECOVERY_URL" != "" ]; then
+    echo "Found database configuration in OLD_RECOVERY_URL=$OLD_RECOVERY_URL"
 
     regex='^postgres://([a-zA-Z0-9_-]+):([a-zA-Z0-9]+)@([a-z0-9.-]+):([[:digit:]]+)/([a-zA-Z0-9_-]+)$'
-    if [[ $DATABASE_URL =~ $regex ]]; then
+    if [[ $OLD_RECOVERY_URL =~ $regex ]]; then
         export DB_ADDR=${BASH_REMATCH[3]}
         export DB_PORT=${BASH_REMATCH[4]}
         export DB_DATABASE=${BASH_REMATCH[5]}
